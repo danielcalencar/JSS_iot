@@ -1,0 +1,106 @@
+\documentclass[10pt,conference]{IEEEtran}
+
+\usepackage[pdftex]{graphicx}
+\usepackage{multirow}
+\usepackage{fancybox}
+\usepackage{cite}
+\usepackage{hyperref}
+\usepackage{flushend}
+\usepackage{color}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage{epstopdf}
+\usepackage{color}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{epsfig}
+\usepackage{caption}
+\usepackage{rotating}
+\usepackage{arydshln}
+\usepackage{subfig,float}
+\usepackage{soul}
+\usepackage{fancybox}
+\usepackage{hyperref}
+%\usepackage[bottom]{footmisc} 
+\usepackage{nameref}
+\usepackage{blindtext}
+\usepackage{amsfonts}
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+\newcommand{\etal}{\textit{et al.}}
+\newcommand{\etc}{etc.}
+\newcommand{\eg}{e.g.,}
+\newcommand{\ie}{i.e.,}
+
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+
+\newcommand{\dan}[1]{{\color{blue}[dan:~#1]}}
+\newcommand{\fixme}[1]{{\color{red}[#1]}}
+
+\newcommand{\RQone}{RQ1) Do project page metrics share a significant relationship with project popularity?}
+\newcommand{\RQtwo}{RQ2) Should developers care about users' comments and questions?}
+\newcommand{\RQthree}{RQ3) Is there a significant relationship between source-code metrics and project popularity?}
+\newcommand{\RQfour}{RQ4) Do developers' profiles make a significant contribution to project popularity?}
+\newcommand{\RQfive}{RQ5) Can developers' activities improve the popularity of the associated projects?}
+
+\newcommand{\hypobox}[1]{\begin{center}%
+		\noindent\thicklines\setlength{\fboxsep}{8pt}%
+		\cornersize{0.2}\Ovalbox{\begin{minipage}{0.9\columnwidth}%
+				\textit{#1}\end{minipage}} \end{center}}
+
+\pagestyle{plain}
+
+\begin{document}
+	\title{Understanding the Popularity of IoT Projects in Online Communities: A Case Study of Hackster.io}
+%
+%	\author{\IEEEauthorblockN{Michael Shell}
+%		\IEEEauthorblockA{School of Electrical and\\Computer Engineering0\\
+%			Email: http://www.michaelshell.org/contact.html}
+%		\and
+%		\IEEEauthorblockN{Homer Simpson}
+%		\IEEEauthorblockA{Twentieth Century Fox\\
+%			Springfield, USA\\
+%			Email: homer@thesimpsons.com}
+%		\and
+%		\IEEEauthorblockN{James Kirk\\ and Montgomery Scott}
+%		\IEEEauthorblockA{Starfleet Academy\\
+%			San Francisco, California 96678--2391}}
+
+\author{
+	\vspace{1.45cm}}
+
+
+	\maketitle
+	
+	\begin{abstract}\label{section:abstract}
+		\input{1-abstract.tex}
+	\end{abstract}
+	
+	\IEEEpeerreviewmaketitle
+	
+	\input{2-introduction}
+	\input{3-datacollection}
+	\input{4-metrics}
+	\input{5-approach}
+	
+	\input{rq1}
+	\input{rq2}
+	\input{rq3}
+	\input{rq4}
+	\input{rq5}
+	
+	
+	\input{6-ToV}
+	\input{7-relatedwork}
+	\input{8-conclusion}
+	
+	\bibliographystyle{IEEEtran}
+	\bibliography{biblio} 
+	
+\end{document}
+
+

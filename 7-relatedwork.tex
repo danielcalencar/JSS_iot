@@ -1,0 +1,68 @@
+\section{Related Work}\label{section:relatedWork}
+
+In this section, we present the existing work that is related to our research.
+%In our work, we study the popularity of IoT projects that are hosted on the Hackster website. Hackster allows users to host their projects, which may be replicated by other users. When a project is interesting to other users, the number of views and, consequently, the rank of that project increase (i.e., the project becomes more popular). 
+As the focus of our research is project popularity, we outline related research about IoT devices and popularity of projects that are hosted on collaborative web environments.
+
+\subsection{IoT devices}
+
+%IoT is the network of physical devices (e.g., vehicles) embedded with electronics, software, sensors, actuators, and connectivity, so that these devices are allowed to collect and exchange data.
+
+Researchers have recently studied IoT in a wide variety of problems.
+Researchers have investigate context-aware IoT
+approaches~\cite{chattopadhyay2015way,d2014data,nambi2014unified,jin2014information,perera2014context,bauman2014discovering,barnaghi2016searching,li2014qos},
+fault-tolerance in IoT
+services~\cite{su2014decentralized,reijers2013design,zhou2015supporting}, IoT
+and cloud
+computing~\cite{botta2014integration,kamilaris2011smart,rao2012cloud,fox2012architecture,zaslavsky2013sensing},
+and IoT service
+composition~\cite{florescu2003xl,billet2014task,hachem2011ontologies,alam2010senaas,tzortzis2016semi,de2012internet,zhang2017service,huang2015context,eisenhauer2010hydra,
+	su2014decentralized,patel2015enabling}.
+Regarding context-aware approaches, Chattopadhyay \etal~\cite{chattopadhyay2015way} presented an
+analytical method that helps developers to write IoT application without heavy
+knowledge of signal processing and specific
+domains. D'Oca and Hong~\cite{d2014data} proposed a
+framework with two data mining techniques (i.e.,~clustering and associated
+rules) to identify occupant behaviors of a window opening and closing. The
+authors found that indoor air temperature, outdoor air temperature, and
+occupancy presence are the most important factors for windows opening. As to
+explain window closing, the indoor air temperature and outdoor air temperature
+are the most important factors. As for fault-tolerance in IoT services, Su \etal~\cite{su2014decentralized} proposed the Strip approach, which helps to achieve failover mechanisms upon the replacement of IoT devices. The results of their research show that failures may be recovered within seconds without the need for developers and administrators in
+the process. Regarding IoT and Cloud computing
+integration, Botta \etal~\cite{botta2014integration} conducted a literature
+review to understand the potential applications and challenges of using IoT and
+Cloud computing together (\ie~the {\em CloudIoT} paradigm). The authors
+identify several open issues, such as the need for more standardization in both
+IoT and Cloud computing fields. Finally, with respect to IoT composition,
+Tzortzis and Spyrou~\cite{tzortzis2016semi} proposed a semi-automatic approach
+that allows developers to discover, consume, and interconnect IoT services in
+order to create more complex services. They evaluate their approach by
+interconnecting simple IoT-enables services.% and creating a complex application for counting people in a smart meeting room.
+
+Different from the aforementioned work, our research focuses on understanding the metrics that share a significant relationship with the popularity of the IoT projects rather than investigating the approaches that can improve the IoT technology.
+
+
+\subsection{Projects popularity}
+
+There have been several studies that investigate the factors that share a significant relationship with the popularity of software projects
+GitHub~\cite{weber2014makes,borges2016understanding,tian2015characteristics,syer2013revisiting}.
+Weber et al.~\cite{weber2014makes} studied a large set of features that
+characterize open source projects, including both in-code features and metadata
+features. 
+%The result revealed that in-code features are more important than author metadata features. 
+Borges et al.~\cite{borges2016understanding} used multiple linear regressions
+to study the main factors that have an association with the number of stars of
+GitHub projects. These factors include the programming languages, application
+domains and new features of these projects. Tian et
+al.~\cite{tian2015characteristics} investigated the most important factors
+regarding the ratings of free Android applications. Also, Syer
+\etal~\cite{syer2013revisiting} revisited prior empirical findings in Software
+Engineering for $15$ most popular mobile apps. The authors found that the number
+of core developers in mobile app projects are usually smaller than large
+desktop/server applications such as the Apache HTTP server.
+
+Compared with the aforementioned work, our study is the first to study the popularity of IoT projects in an online community. Furthermore, we investigate
+five group of metrics, which are the {\em project page}, {\em user comments},
+{\em source-code}, {\em developer activities}, and {\em developer profile}
+groups of metrics. 
+

@@ -1,0 +1,20 @@
+\begin{table*}[t]
+	\centering
+	\caption{List of the user comments metrics. The significant metrics are marked with (an) asterisk(s). The upward arrows indicate a positive relationship with project popularity, while the downward arrows indicate otherwise.}
+	\label{table:RQ2}
+\begin{tabular}{|>{\bfseries}l|r|rl|c|l|}
+	\hline
+	\multirow{2}{*}{Metric} & \textbf{Mean}  & \multirow{2}{*}{\textbf{p-value}}  &     & \multirow{2}{*}{\textbf{Effect}}     &\textbf{Correlated}\\
+	&\textbf{Square}&& &&\textbf{Metrics} \\
+	\hline	\hline
+		\#Comments with positive sentiment scores       & 1.85E+00 & 2.35E-176 & *** & $\nearrow$ & Ratio of comments with positive sentiment scores                                                                                                   \\
+		\#Comments with negative sentiment scores       & 1.13E+00 & 6.28E-119 & *** & $\searrow$ & \#Comments with neutral sentiment scores                                                                                                           \\
+		\#Questions addressed by developers             & 5.85E-01 & 6.12E-68  & *** & $\nearrow$ & \begin{tabular}[c]{@{}l@{}}Ratio of questions addressed by developers,\\ \#Addressed questions, Ratio of addressed questions\end{tabular}                                                    \\
+		\#Comments                                      & 7.11E-02 & 2.18E-10  & *** & $\nearrow$ & \#Questions                                                                                                                                        \\
+		Ratio of questions                              & 8.19E-03 & 3.02E-02  & *   & $\searrow$ &        $-$                                                                                                                                             \\
+		\begin{tabular}[c]{@{}l@{}}Ratio of comments with negative sentiment\\scores\end{tabular} & 7.37E-03 & 3.98E-02  & *   & $\searrow$ & Ratio of comments with neutral sentiment scores                                                                                                    \\
+		\#Developers' replies                           & 3.70E-03 & 1.45E-01  &     & $\searrow$ & \begin{tabular}[c]{@{}l@{}}Ratio of reply/comment, \#Replies, Discussions\\ (Maximum and Average), Ratio of developers'\\replies/comments,  Ratio of developers' replies/replies\end{tabular}   \\ \hline
+		\multicolumn{6}{l}{$p-value$ codes:  `***'$<0$, `**'$<0.001$, `*'$<0.01$, `.'$<0.05$}\\                                                                                                                                   
+	\end{tabular}
+\vspace{-0.1cm}
+\end{table*}

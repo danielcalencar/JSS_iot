@@ -1,0 +1,136 @@
+\section{Introduction}\label{introduction}
+\begin{comment}
+\end{comment}
+
+The Internet of Things (IoT) is transforming human lives at an unprecedented
+rate. Users can perform diverse tasks benefiting from the IoT technology. For
+instance, users can remotely control the house temperature using IoT
+applications. In 2017, 15\% of American residents owned a home automation
+device compared to 10\% in April 2016~\cite{npd}. Additionally, according to the
+International Data Corporation (IDC)~\cite{idc} there will be a market of
+$\$1.7$ trillion with $30$ billion devices connected throughout the IoT
+ecosystem by $2020$.  However, the heterogeneity and immature standardization
+of IoT systems increase the complexity of developing IoT
+systems~\cite{li2015internet,botta2014integration}. Compared to desktop/server
+or mobile systems, IoT systems involve different types of devices, data
+exchange protocols, and deployment environments. In addition, developing IoT
+projects requires knowledge of different hardware platforms, such as
+\textit{Arduino}~\cite{arduino} and \textit{Raspberry Pi}~\cite{raspberrypi},
+as well as knowledge of other specific domains, such as signal
+processing~\cite{chattopadhyay2015way}. 
+
+Recently, online IoT communities have become popular among IoT developers as an
+increasing number of IoT developers publish their projects online. The online
+communities allow developers to learn more from each other while users also
+benefit from newest IoT projects~\cite{singh2017create}. As online IoT
+communities grow and serve a broader audience, they allow project developers to
+create business opportunities, especially for those developers whose projects
+are more popular among users. For example, the page of a popular project might
+serve as an advertiser for a company that supports that project.
+Also, the owners of popular projects receive {\em reputation
+points}~\cite{reputation} which can be exchanged with products in online stores~\cite{store}.
+
+Several studies in the recent years have investigated the metrics that share a
+significant relationship with the popularity of software projects in online
+communities~\cite{chen2011predicting, tian2015characteristics,
+krutz2016examining, stewart2002exploratory}.  For example,
+Tian~\etal~\cite{tian2015characteristics} studied the metrics that are
+significantly associated with highly rated free Android applications.
+Tian~\etal~found that the number of promotional images displayed by an app on
+the Google Play Store and the size of the app are strongly correlated with
+highly rated Android apps. Despite the advances that have been made by studying the popularity of software
+projects in online communities, little is known about the characteristics of
+the popular IoT projects.
+
+the growing importance of IoT applications
+
+In this paper, we conduct an exploratory study to investigate the popularity of
+IoT projects in online communities.  We perform a case study of $1,232$ IoT
+projects that are hosted on \textit{Hackster}~\cite{hackster}, a large online
+IoT community that is sponsored by Microsoft, Intel, Google, and Amazon.  In
+addition, several IoT projects on the Hackster are developed and deployed using
+IoT cloud services, such as Amazon Web Service IoT Platform (AWS
+IoT)~\cite{awsamazon} and Microsoft Azure~\cite{azure}.  Such projects
+comprehend a wide diversity of IoT projects, such as home automation (e.g.,
+remotely controlling the surveillance cameras and air conditioners in the
+house).  All of the collected IoT projects in our study are based on the two
+most popular IoT platforms (i.e., \textit{Arduino} and \textit{Raspberry
+Pi})~\cite{hackster-survey-2016}. 
+
+We study five groups of metrics where each group covers a unique aspect of an
+IoT project, including (i) \textit{project page} that concerns textual and
+graphical explanations, (ii) \textit{source-code} that examines the source-code
+metrics, (iii) \textit{user comments} group that covers the comments that are
+posted for each project, (iv) \textit{developer profile} that covers the
+profile contents of each developer, and (v) \textit{developer activities}
+that reflects each developers' activities on the Hackster. In total, we measure
+$112$ metrics to explain project popularity.  First, we investigate the
+popularity of IoT projects by building a linear regression model, namely a
+general model, which obtains a goodness-of-fit of $0.67$ that can greatly
+explain the relationship between the metrics and project
+popularity~\cite{pearson1893contributions}.  To determine the contribution of
+each group of metrics to project popularity, we repeat the following steps for
+each group of metrics: (i) we remove all the metrics of a given group and build
+another model, and (ii) we investigate the contribution of each group of
+metrics by comparing the new model with the general model using the $\chi^2$
+test~\cite{rice1989analyzing}.  Moreover, we identify the metrics that share a
+significant relationship with project popularity.  Developers can improve the
+popularity of their projects with respect to our findings.  We are in favor of
+addressing the following five research questions:
+
+\vspace{0.1cm}
+
+\noindent\textit{\RQone}
+
+
+We observe that project page metrics are significantly associated with project
+popularity. Ten project page metrics, such as tags and project descriptions,
+share a significant relationship with project popularity. Therefore, IoT
+developers should carefully build the pages of their projects.
+
+\vspace{0.1cm}
+
+\noindent\textit{\RQtwo}
+
+We find that user comments metrics contribute to project popularity
+significantly.  For example, developers should reply to the questions that are
+asked in the comments in order to achieve a higher project popularity.
+
+\vspace{0.1cm}
+
+\noindent\textit{\RQthree}
+
+Source-code metrics, such as the number of comments in the source-code, have a
+significant relationship with project popularity. Developers should make sure
+that the source-code is comprehensible and reusable when publishing a project.
+
+\vspace{0.1cm}
+
+\noindent\textit{\RQfour}
+
+We observed that developers' profiles do not contribute to the popularity of the associated projects significantly.
+
+\vspace{0.1cm}
+
+\noindent\textit{\RQfive}
+
+Developers' activities, such as commenting on other users' posts and giving respects (i.e., thumbs-ups) to other projects, can significantly improve the popularity of the associated projects. Hackster provides a specific page for each developer that lists the complete history of a given developer's activities.
+
+\vspace{0.1cm}
+
+%
+%The main contributions of this paper are:
+%
+%\begin{itemize}
+%    \item We are the first to conduct a large-scale explanatory study on the popularity of IoT projects in online communities.
+%    We study $112$ metrics of IoT projects from five different groups of metrics, such as the source-code and developer activities.
+%    \item We apply statistical analyses on our proposed metrics and discover $31$ metrics that share a significant relationship with the popularity of IoT projects. Moreover, we provide actionable suggestions to help IoT developers increase the popularity of their projects in online communities.
+%\end{itemize}
+
+
+\textit{Paper organization.}
+In Section~\ref{datacol}, we explain the data collection process. In Section~\ref{sec:measure}, we describe the metrics that we use to explain project popularity.
+We describe our approach in Section~\ref{section:approach}.
+In Section~\ref{section:results}, we report and discuss the results of the experiments.
+In Section~\ref{section:threats}, we discuss the potential threats to the validity of our study. We outline the related research in Section~\ref{section:relatedWork}. Finally, we draw conclusions in Section~\ref{section:conclusion}.
+

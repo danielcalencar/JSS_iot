@@ -1,0 +1,165 @@
+
+\section{Metrics Measurement}\label{sec:measure}
+
+In this section, first, we explain the metric that is used to quantify project popularity.
+Then, we explain $112$ metrics that we measure to explain the popularity of IoT projects (i.e., explanatory metrics).
+For each metric, we provide our motivation and a brief description.
+
+\subsection{Popularity}
+
+The projects that are hosted on the Hackster are ranked based on the unique number of views by users (i.e., view count)~\cite{hacksterpop}.
+For example, the top-ranked projects hold the highest view counts.
+Therefore, we use the view count as an indicator of the
+popularity of the projects.
+Multiple views by the same user are \textit{counted once} for each project.
+
+On the other hand, the respect count records the number of respects (i.e., thumbs-ups) that a given project receives from the users.
+The respect count can be a good alternative to the popularity of
+projects.
+Nonetheless, the Pearson's correlation~\cite{lawrence1989concordance} between the view counts and the respect counts of our subject projects is $0.90$.
+Hence, we choose the view count, the same metric that is used by the Hackster to rank the popularity of the project, as our dependent metric for quantifying the popularity of the projects.
+
+\subsection{Project Page}
+
+In this subsection, we describe the $13$ metrics that we extract from the project pages.
+
+
+\subsubsection*{Platform} Every project can be built on top of a specific platform.
+A specific platform could potentially impact the popularity of the projects, due to the advantages and limitations of the platform.
+In this study, the projects are either based on the Arduino~\cite{arduino} or the Raspberry~\cite{raspberrypi} platforms.
+
+\subsubsection*{Difficulty} Each project can be rated as \textit{Easy}, \textit{Intermediate}, \textit{Advanced}, or \textit{Super Hard} by the developers of a given project.
+A more difficult project is harder to use and replicate. Thus, harder levels of difficulty may negatively impact the popularity of IoT projects.
+
+\subsubsection*{Estimated Time} The {\em estimated time} measures the time elapsed to complete a project.
+%Users can follow the project descriptions to use or replicate a project.
+A shorter time to use or replicate a project may increase the popularity of the project.
+
+
+
+\subsubsection*{Description Size} Developers can provide a brief description for their projects. A longer description can provide more information. We count the number of words and sentences of the description for each project.
+
+\subsubsection*{License} Different licenses may be applied to each project.
+For example, projects may be available under the $GLP3+$~\cite{gpllicense} or $MIT$~\cite{open2006license} licenses.
+Sen~\cite{sen2006open} observed that licenses impact the popularity of open-source projects as a license allows a project to be used, modified, or shared under specific terms and conditions.
+
+\subsubsection*{YouTube} The page of a given project may refer to a video on YouTube to better teach how to understand and replicate that project. For each understudy project, we check whether such a link is available.
+%Projects that provide YouTube videos on their page may gain more popularity among users since these videos can ease the process of understanding the projects.
+
+\subsubsection*{Stories}
+
+A project can be presented using a number of stories.
+%Developers can freely post the contents which they wish to present to other users as stories.
+The stories allow developers to explain the purpose of the project and provide more details about the project~\cite{hackster}.
+
+\paragraph*{(i) Number of Stories} We count the number of stories for each project to check whether a high number of stories are associated with a high project popularity.
+
+\paragraph*{(ii) Length of Stories} We count the number of words and sentences of the stories that are provided for each project.
+
+\paragraph*{(iii) Number of Links} We count the number of distinct links in the stories of each project. More links may provide more references (e.g., more explanations using other resources) which may be associated with project popularity.
+
+\subsubsection*{Schematics} Each project can be associated with one (or more) schema that visually describes how to replicate the project.
+%We check whether a schema is provided. 
+The presence of a schema may be associated with project popularity. 
+
+\subsubsection*{Type} The type of a project indicates the status of the project. For example, the type indicates whether a project is fully implemented (thus providing a full documentation for users) or still is in-progress.
+
+\subsubsection*{Software Tools} A project that employs a number of software tools might be more convenient to use and to replicate.
+
+\subsubsection*{Hardware Tools} Each project may require various hardware units in order to be built, such as a LED or a smoke detector. A high number of hardware tools may indicate more functionalities although makes the project more costly.
+
+\subsubsection*{Tags} Project tags are used to describe the characteristics of a project.
+For instance, tags may be used to describe the project purpose and the main software and hardware platforms that are used to build the project. Additionally, projects can be grouped and accessed by their tags on the Hackster. Having more tags in the project page can increase the possibility of being found and accessed by more users.
+
+\subsection{User Comments}
+
+The comments that are posted on a project may indicate the interest of users in the project. Although developers cannot directly control the number of comments (i.e., it depends on other users to post a comment), developers can reply to the comments and address the questions. We measure $20$ metrics to describe the comments.
+
+\subsubsection*{Number of Comments} A project that receives a high number of comments might be more interesting to users, which may be associated with the popularity of that project.
+
+\subsubsection*{Number and Ratio of Replies}
+Posted comments may be either replied by the developers of the project or other interested users.
+Following up the comments may influence the popularity of a project as users may expect their comments to be replied. Hence, we measure (i) the number of replies, (ii) the number of project developer replies, (iii) the ratio of replies to comments, (iv) the ratio of project developer replies to comments, and (v) the ratio of project developer replies to all replies.
+
+\subsubsection*{Discussions} In order to capture the intensity of discussions over comments, we count (i) the mean number of
+replies for each comment and (ii) the maximum number of replies that a single comment has received in a project.
+
+\subsubsection*{Number and Ratio of Questions} A comment can either be informative (\eg~praises) or a question. We distinguish between a question and a non-question comment by using the Stanford natural processing toolkit~\cite{manning2014stanford}.
+We measure (i) the number of questions and (ii) the ratio of questions to comments. More number of questions can indicate complications, issues, or unclear descriptions in a project.
+
+\subsubsection*{Number and Ratio of Addressed Questions}
+Developers (and other users) can reply to any comment, i.e., questions and non-questions.
+Developers that reply to the questions may have a higher chance to increase the project popularity as a question is meant to be asked to receive an answer~\cite{ko2010power}.
+Hence, we measure (i) the number of questions that have been replied (by the project developers and other users), (ii) the number of questions that have been replied by the project developers, (iii) the ratio of replied questions to all questions, and (iv) the ratio of questions that have been replied by project developers to all questions.
+
+\subsubsection*{Sentiment Scores of Comments} Sentiment scores of comments may indicate whether the comments bring positive or negative sentiments within them.
+A project that receives mostly positive comments is more subjected to be a popular project rather than a project with mostly negative comments.
+We apply sentimental analyses~\cite{thelwall2010sentiment} using the SentiStrength tool~\cite{thelwall2012sentiment} to capture the sentiment scores of the comments. The SentiStrength produce a score that ranges from $-5$ (the lowest) to $+5$ (the highest) for each comment.
+Sentiment scores of $\{-1, 0, +1\}$ indicate a neutral comment, while $\{+2, +3, +4, +5\}$ indicate a positive comment, and $\{-5, -4, -3, -2\}$ indicate a negative comment~\cite{thelwall2012sentiment}.
+We then measure (i) the number of comments with negative scores, (ii) the number of comments with neutral scores, (iii) the number of comments with positive scores, (iv) the ratio of negative comments, (v) the ratio of neutral comments, and (vi) the ratio of positive comments.
+
+\subsection{Developer Profile}
+
+Developers can create profiles on the Hackster to describe themselves and to better interact with other users. We measure $6$ metrics based on the developers' profiles.
+
+\subsubsection*{Number of Projects}
+Developers are allowed to publish one or more projects on the Hackster.
+Developers who dedicate their time and resources on one or a few number of projects may be able to publish more popular projects.
+We measure the number of projects that are published by each developer.% to study the relationship between the number of projects and the popularity of the associated projects.
+
+\subsubsection*{Length of Biography}
+Developers can describe themselves by providing a biography.
+We capture (i) the number of words, and (ii) the number of sentences within a developer's biography. A longer biography might contain more information about the developer that can motivate users to check out the associate projects.
+
+\subsubsection*{Availability for Hiring}
+A developer may indicate whether she/he is available to be hired. The availability for hiring might indicate how eager a developer is to provide better projects which may be associated with the popularity her/his projects.
+
+\subsubsection*{Number of Tools}
+We measure the number of tools that developers list on their profiles. A high number of listed tools can indicate that the associated projects cover a wider range of functionalities, which may be related to project popularity.
+
+\subsubsection*{Number of Skills}
+We measure the number of skills that developers list on their profiles. A high number of listed skills might indicate a more skilled developer that can influence the popularity of the associated published projects.
+
+\subsection{Developer Activities}
+Developers may perform various activities on the Hackster and interact with other developers and users, such as posting comments. Such interactions can help a developer to be seen and be noticed by other users that may lead to attracting more audience to the published projects. We compute the following $8$ metrics for each developer.
+
+\subsubsection*{Number of Communities}
+A community is a page on the Hackster that allows users with the same interests to communicate with each other.
+Therefore, being part of a community can motivate other users to try the projects of the developer.
+%Each developer may be part of a community.
+We count the number of communities that a developer participates in.
+
+\subsubsection*{Number of Followers and Followings}
+The users that are followed by a developer are called followings, and the users that follow the developer are called followers~\cite{crawford2009following}.
+The number of followers and the number of followings of a developer might indicate the degree of interactions between the developer and other users. For example, having a more number of followers for a developer lets the followers see more of the associated projects. We count (i) the number of followers, and (ii) the number of followings of each developer.
+
+\subsubsection*{Number of Contests}
+Developers may attend contests that can be held on the Hackster platform.
+The contests are challenges that developers may use novel hardware tools that are announced by companies to build creative projects.
+By attending contests, developers may also win prizes and increase their skills. Therefore, we measure the number of contests that a developer has attended.
+
+\subsubsection*{Number of Posts}
+Developers can share posts with other users on the Hackster platform. Posts do not represent a direct interaction between Hackster users, but rather the act of sharing content (\eg~links and news) on the Hackster platform.
+An active developer has a higher chance of being noticed by other users, which might attract more number of views to the associated projects.
+%We count the number of posts that are shared by each developer to check whether such a number share a relationship with the associated project popularity.
+
+\subsubsection*{Number of Comments}
+Developers can post comments for other users' posts. A higher degree of interaction with other users may attract more views to a developer's project.
+We count the number comments of each developer on other posts and projects.
+
+\subsubsection*{Number of Likes}
+A developer can like other users' posts. We count the number of likes of each developer.
+
+\subsubsection*{Number of Respects}
+Each developer can give a thumbs-up (i.e., respect) to support other projects. For each developer, we count the number respects for other users' projects.
+
+\subsection{Source Code}
+
+A code that is written neatly, easy to understand, and less complex~\cite{storey2006theories} might be more popular~\cite{noei2017study}.
+We use the \textit{Understand} tool~\cite{understand,understandfeatues} to compute the source-code metrics.
+Examples of source-code metrics are \textit{the lines of code} and \textit{code complexity}.
+\textit{Understand} is a customizable integrated development environment that enables static code analysis through an array of visual, documentation, and metric tools.
+\textit{Understand} helps software developers to comprehend, maintain, and document source-codes~\cite{understand}. There are two main reasons for using \textit{Understand} as our code analysis tool. First, it supports almost all the mainstream programming languages, including \textsc{C/C++}, \textsc{C\#}, \textsc{JAVA}, \textsc{Python}, and \textsc{Javascript}.
+Second, it provides a command-line tool, called UND~\cite{understandcmd}, that supports the analysis of various projects in a batch processing mode.
+We measure $65$ source-code metrics using \textit{Understand}.
+A list of the metrics that we use is available at the \textit{Understand} website~\cite{understandmetrics}.

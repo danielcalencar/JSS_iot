@@ -1,0 +1,105 @@
+\documentclass[review]{elsarticle}
+
+%%%%%%%%% begin packages
+\usepackage{comment}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{fancybox}
+\usepackage{hyperref}
+\usepackage{flushend}
+\usepackage{color}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage{epstopdf}
+\usepackage{color}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{epsfig}
+\usepackage{caption}
+\usepackage{rotating}
+\usepackage{arydshln}
+\usepackage{subfig,float}
+\usepackage{soul}
+\usepackage{fancybox}
+\usepackage{hyperref}
+\usepackage[bottom]{footmisc} 
+\usepackage{nameref}
+\usepackage{blindtext}
+\usepackage{lineno}
+%%%%%%%%% end packages
+
+%%%%%%%%% begin commands
+\newcommand{\etal}{\textit{et al.}}
+\newcommand{\etc}{etc.}
+\newcommand{\eg}{e.g.,}
+\newcommand{\ie}{i.e.,}
+
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+
+\newcommand{\dan}[1]{{\color{blue}[dan:~#1]}}
+\newcommand{\fixme}[1]{{\color{red}[#1]}}
+
+\newcommand{\RQone}{RQ1) Do project page metrics share a significant relationship with project popularity?}
+\newcommand{\RQtwo}{RQ2) Should developers care about users' comments and questions?}
+\newcommand{\RQthree}{RQ3) Is there a significant relationship between source-code metrics and project popularity?}
+\newcommand{\RQfour}{RQ4) Do developers' profiles make a significant contribution to project popularity?}
+\newcommand{\RQfive}{RQ5) Can developers' activities improve the popularity of the associated projects?}
+
+\newcommand{\hypobox}[1]{\begin{center}%
+		\noindent\thicklines\setlength{\fboxsep}{8pt}%
+		\cornersize{0.2}\Ovalbox{\begin{minipage}{0.9\columnwidth}%
+				\textit{#1}\end{minipage}} \end{center}}
+%%%%%%%%% end commands
+
+\modulolinenumbers[5]
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+\journal{Journal of Systems and Softwares}
+\bibliographystyle{elsarticle-num}
+
+\begin{document}
+
+\begin{frontmatter}
+
+	\title{Understanding the Popularity of IoT Projects in Online Communities: A Case Study of Hackster.io}
+	\author{Ehsan Noei$^\ast$, Daniel Alencar da Costa, Ying Zou} 
+	\address{Department of Electrical and Computer Engineering,\\ Queen's University, Kingston, Canada}
+	\address{\{ehsan.noei, daniel.alencar, ying.zou\}@queensu.ca}
+	\cortext[mycorrespondingauthor]{Corresponding author}
+
+	\begin{abstract}\label{section:abstract}
+		\input{1-abstract}
+	\end{abstract}
+
+	\begin{keyword}
+		Project popularity\sep Internet of things projects\sep Hackster.io
+	\end{keyword}
+
+\end{frontmatter}
+
+\linenumbers
+
+%%%%%%%%% begin content
+\input{2-introduction}
+\input{3-datacollection}
+\input{4-metrics}
+\input{5-approach}
+
+\input{rq1}
+\input{rq2}
+\input{rq3}
+\input{rq4}
+\input{rq5}
+
+\input{6-ToV}
+\input{7-relatedwork}
+\input{8-conclusion}
+%%%%%%%%% end content
+
+\section*{References}
+
+\bibliography{biblio}
+
+\end{document}
