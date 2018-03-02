@@ -1,0 +1,10 @@
+# Automatically generated files
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.spl
+*.gz
+*.zip
+0-main.pdf
