@@ -1,8 +1,6 @@
 \documentclass[review]{elsarticle}
 
 %%%%%%%%% begin packages
-\usepackage{ragged2e}
-\usepackage{makecell}
 \usepackage{comment}
 \usepackage{graphicx}
 \usepackage{multirow}
@@ -29,14 +27,9 @@
 \usepackage{nameref}
 \usepackage{blindtext}
 \usepackage{lineno}
-\usepackage{tabularx}
 %%%%%%%%% end packages
 
 %%%%%%%%% begin commands
-\newcolumntype{L}[1]{>{\RaggedRight}p{#1}}
-\newcolumntype{R}[1]{>{\RaggedLeft}p{#1}}
-\newcolumntype{C}[1]{>{\Centering}p{#1}}
-
 \newcommand{\etal}{\textit{et al.}}
 \newcommand{\etc}{etc.}
 \newcommand{\eg}{e.g.,}
@@ -57,7 +50,6 @@
 		\noindent\thicklines\setlength{\fboxsep}{8pt}%
 		\cornersize{0.2}\Ovalbox{\begin{minipage}{0.9\columnwidth}%
 				\textit{#1}\end{minipage}} \end{center}}
-
 %%%%%%%%% end commands
 
 \modulolinenumbers[5]
@@ -100,17 +92,14 @@
 \input{rq3}
 \input{rq4}
 \input{rq5}
-\input{6-guidelines}
-\input{7-ToV}
-\input{8-relatedwork}
-\input{9-conclusion}
+
+\input{6-ToV}
+\input{7-relatedwork}
+\input{8-conclusion}
 %%%%%%%%% end content
 
 \section*{References}
 
 \bibliography{biblio}
-
-\appendix
-\input{appendix}
 
 \end{document}

@@ -1,12 +1,9 @@
 
 \section{Metrics Measurement}\label{sec:measure}
-\begin{comment}
-\end{comment}
 
-In this section, first, we explain the metric that is used to quantify project
-popularity.  Then, we explain $112$ metrics that we measure to explain the
-popularity of IoT projects (i.e., explanatory metrics).  For each metric, we
-provide our motivation and a brief description.
+In this section, first, we explain the metric that is used to quantify project popularity.
+Then, we explain $112$ metrics that we measure to explain the popularity of IoT projects (i.e., explanatory metrics).
+For each metric, we provide our motivation and a brief description.
 
 \subsection{Popularity}
 
@@ -34,11 +31,11 @@ In this study, the projects are either based on the Arduino~\cite{arduino} or th
 \subsubsection*{Difficulty} Each project can be rated as \textit{Easy}, \textit{Intermediate}, \textit{Advanced}, or \textit{Super Hard} by the developers of a given project.
 A more difficult project is harder to use and replicate. Thus, harder levels of difficulty may negatively impact the popularity of IoT projects.
 
-\subsubsection*{Estimated Time} The {\em estimated time} measures the time
-elapsed to reproduce the steps that are necessary to complete an IoT project.
+\subsubsection*{Estimated Time} The {\em estimated time} measures the time elapsed to complete a project.
 %Users can follow the project descriptions to use or replicate a project.
-A shorter time to use or replicate a project may increase the popularity of the
-project.
+A shorter time to use or replicate a project may increase the popularity of the project.
+
+
 
 \subsubsection*{Description Size} Developers can provide a brief description for their projects. A longer description can provide more information. We count the number of words and sentences of the description for each project.
 
@@ -97,57 +94,34 @@ Hence, we measure (i) the number of questions that have been replied (by the pro
 
 \subsubsection*{Sentiment Scores of Comments} Sentiment scores of comments may indicate whether the comments bring positive or negative sentiments within them.
 A project that receives mostly positive comments is more subjected to be a popular project rather than a project with mostly negative comments.
-We apply sentiment analyses~\cite{thelwall2010sentiment} using the SentiStrength tool~\cite{thelwall2012sentiment} to capture the sentiment scores of the comments. The SentiStrength produce a score that ranges from $-5$ (the lowest) to $+5$ (the highest) for each comment.
+We apply sentimental analyses~\cite{thelwall2010sentiment} using the SentiStrength tool~\cite{thelwall2012sentiment} to capture the sentiment scores of the comments. The SentiStrength produce a score that ranges from $-5$ (the lowest) to $+5$ (the highest) for each comment.
 Sentiment scores of $\{-1, 0, +1\}$ indicate a neutral comment, while $\{+2, +3, +4, +5\}$ indicate a positive comment, and $\{-5, -4, -3, -2\}$ indicate a negative comment~\cite{thelwall2012sentiment}.
 We then measure (i) the number of comments with negative scores, (ii) the number of comments with neutral scores, (iii) the number of comments with positive scores, (iv) the ratio of negative comments, (v) the ratio of neutral comments, and (vi) the ratio of positive comments.
 
 \subsection{Developer Profile}
 
-Developers can create profiles on the Hackster to describe themselves and to
-better interact with other users. For each developer, we measure $6$
-profile-related metrics. In our dataset, we aggregate the profile-related
-metrics by creating a new row to each developer $d$. For example, given that a
-project $p_1$ has two developers $d_1$ and $d_2$, there will be two rows in our
-datasets. The first row will contain the measures for $p_1$ and $d_1$ and the
-second row will contain the measures for $p_1$ and $d_2$. We explain each of
-the profile-related metrics below.
+Developers can create profiles on the Hackster to describe themselves and to better interact with other users. We measure $6$ metrics based on the developers' profiles.
 
-\subsubsection*{Number of Projects} Developers are allowed to publish one or
-more projects on the Hackster.  Developers who dedicate their time and
-resources on one or a few number of projects may be able to publish more
-popular projects.  We measure the number of projects that are published by each
-developer.% to study the relationship between the number of projects and the
-popularity of the associated projects.
+\subsubsection*{Number of Projects}
+Developers are allowed to publish one or more projects on the Hackster.
+Developers who dedicate their time and resources on one or a few number of projects may be able to publish more popular projects.
+We measure the number of projects that are published by each developer.% to study the relationship between the number of projects and the popularity of the associated projects.
 
-\subsubsection*{Length of Biography} Developers can describe themselves by
-providing a biography.  We capture (i) the number of words, and (ii) the number
-of sentences within a developer's biography. A longer biography might contain
-more information about the developer that can motivate users to check out the
-associate projects.
+\subsubsection*{Length of Biography}
+Developers can describe themselves by providing a biography.
+We capture (i) the number of words, and (ii) the number of sentences within a developer's biography. A longer biography might contain more information about the developer that can motivate users to check out the associate projects.
 
-\subsubsection*{Availability for Hiring} A developer may indicate whether
-she/he is available to be hired. The availability for hiring might indicate how
-eager a developer is to provide better projects which may be associated with
-the popularity her/his projects.
+\subsubsection*{Availability for Hiring}
+A developer may indicate whether she/he is available to be hired. The availability for hiring might indicate how eager a developer is to provide better projects which may be associated with the popularity her/his projects.
 
-\subsubsection*{Number of Tools} We measure the number of tools that developers
-list on their profiles. A high number of listed tools can indicate that the
-associated projects cover a wider range of functionalities, which may be
-related to project popularity.
+\subsubsection*{Number of Tools}
+We measure the number of tools that developers list on their profiles. A high number of listed tools can indicate that the associated projects cover a wider range of functionalities, which may be related to project popularity.
 
-\subsubsection*{Number of Skills} We measure the number of skills that
-developers list on their profiles. A high number of listed skills might
-indicate a more skilled developer. A skilled developer may produce more
-interesting projects, which influence the popularity of the associated
-published projects.
+\subsubsection*{Number of Skills}
+We measure the number of skills that developers list on their profiles. A high number of listed skills might indicate a more skilled developer that can influence the popularity of the associated published projects.
 
 \subsection{Developer Activities}
-
-Developers may perform various activities on the Hackster and interact with
-other developers and users, such as posting comments. Such interactions can
-help a developer to be seen and be noticed by other users that may lead to
-attracting more audience to the published projects. We compute the following
-$8$ metrics for each developer.  
+Developers may perform various activities on the Hackster and interact with other developers and users, such as posting comments. Such interactions can help a developer to be seen and be noticed by other users that may lead to attracting more audience to the published projects. We compute the following $8$ metrics for each developer.
 
 \subsubsection*{Number of Communities}
 A community is a page on the Hackster that allows users with the same interests to communicate with each other.
@@ -174,30 +148,18 @@ Developers can post comments for other users' posts. A higher degree of interact
 We count the number comments of each developer on other posts and projects.
 
 \subsubsection*{Number of Likes}
-A developer can like other users' posts. We count the number of likes that a
-developer gives.
+A developer can like other users' posts. We count the number of likes of each developer.
 
 \subsubsection*{Number of Respects}
 Each developer can give a thumbs-up (i.e., respect) to support other projects. For each developer, we count the number respects for other users' projects.
 
 \subsection{Source Code}
 
-A code that is written neatly, easy to understand, and less
-complex~\cite{storey2006theories} might be more popular~\cite{noei2017study}.
-We use the \textit{Understand} tool~\cite{understand,understandfeatues} to
-compute the source-code metrics.  Examples of source-code metrics are
-\textit{the lines of code} and \textit{code complexity}.  \textit{Understand}
-is a customizable integrated development environment that enables static code
-analysis through an array of visual, documentation, and metric tools.
-\textit{Understand} helps software developers to comprehend, maintain, and
-document source-codes~\cite{understand}. There are two main reasons for using
-\textit{Understand} as our code analysis tool. First, it supports almost all
-the mainstream programming languages, including \textsc{C/C++}, \textsc{C\#},
-\textsc{JAVA}, \textsc{Python}, and \textsc{Javascript}.  Second, it provides a
-command-line tool, called UND~\cite{understandcmd}, that supports the analysis
-of various projects in a batch processing mode.  
-
-We measure $65$ source-code
-metrics using \textit{Understand}. A list of the metrics that we use is available in our \ref{appendix:code_metrics}. 
-%the \textit{Understand} website~\cite{understandmetrics}.
-
+A code that is written neatly, easy to understand, and less complex~\cite{storey2006theories} might be more popular~\cite{noei2017study}.
+We use the \textit{Understand} tool~\cite{understand,understandfeatues} to compute the source-code metrics.
+Examples of source-code metrics are \textit{the lines of code} and \textit{code complexity}.
+\textit{Understand} is a customizable integrated development environment that enables static code analysis through an array of visual, documentation, and metric tools.
+\textit{Understand} helps software developers to comprehend, maintain, and document source-codes~\cite{understand}. There are two main reasons for using \textit{Understand} as our code analysis tool. First, it supports almost all the mainstream programming languages, including \textsc{C/C++}, \textsc{C\#}, \textsc{JAVA}, \textsc{Python}, and \textsc{Javascript}.
+Second, it provides a command-line tool, called UND~\cite{understandcmd}, that supports the analysis of various projects in a batch processing mode.
+We measure $65$ source-code metrics using \textit{Understand}.
+A list of the metrics that we use is available at the \textit{Understand} website~\cite{understandmetrics}.

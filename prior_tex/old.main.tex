@@ -1,17 +1,15 @@
-\documentclass[review]{elsarticle}
+\documentclass[10pt,conference]{IEEEtran}
 
-%%%%%%%%% begin packages
-\usepackage{ragged2e}
-\usepackage{makecell}
-\usepackage{comment}
-\usepackage{graphicx}
+\usepackage[pdftex]{graphicx}
 \usepackage{multirow}
 \usepackage{fancybox}
+\usepackage{cite}
 \usepackage{hyperref}
 \usepackage{flushend}
 \usepackage{color}
 \usepackage{caption}
 \usepackage{booktabs}
+\usepackage[T1]{fontenc}
 \usepackage{microtype}
 \usepackage{epstopdf}
 \usepackage{color}
@@ -25,17 +23,13 @@
 \usepackage{soul}
 \usepackage{fancybox}
 \usepackage{hyperref}
-\usepackage[bottom]{footmisc} 
+%\usepackage[bottom]{footmisc} 
 \usepackage{nameref}
 \usepackage{blindtext}
-\usepackage{lineno}
-\usepackage{tabularx}
-%%%%%%%%% end packages
+\usepackage{amsfonts}
 
-%%%%%%%%% begin commands
-\newcolumntype{L}[1]{>{\RaggedRight}p{#1}}
-\newcolumntype{R}[1]{>{\RaggedLeft}p{#1}}
-\newcolumntype{C}[1]{>{\Centering}p{#1}}
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
 
 \newcommand{\etal}{\textit{et al.}}
 \newcommand{\etc}{etc.}
@@ -58,59 +52,55 @@
 		\cornersize{0.2}\Ovalbox{\begin{minipage}{0.9\columnwidth}%
 				\textit{#1}\end{minipage}} \end{center}}
 
-%%%%%%%%% end commands
-
-\modulolinenumbers[5]
-% correct bad hyphenation here
-\hyphenation{op-tical net-works semi-conduc-tor}
-
-\journal{Journal of Systems and Softwares}
-\bibliographystyle{elsarticle-num}
+\pagestyle{plain}
 
 \begin{document}
-
-\begin{frontmatter}
-
 	\title{Understanding the Popularity of IoT Projects in Online Communities: A Case Study of Hackster.io}
-	\author{Ehsan Noei$^\ast$, Daniel Alencar da Costa, Ying Zou} 
-	\address{Department of Electrical and Computer Engineering,\\ Queen's University, Kingston, Canada}
-	\address{\{ehsan.noei, daniel.alencar, ying.zou\}@queensu.ca}
-	\cortext[mycorrespondingauthor]{Corresponding author}
+%
+%	\author{\IEEEauthorblockN{Michael Shell}
+%		\IEEEauthorblockA{School of Electrical and\\Computer Engineering0\\
+%			Email: http://www.michaelshell.org/contact.html}
+%		\and
+%		\IEEEauthorblockN{Homer Simpson}
+%		\IEEEauthorblockA{Twentieth Century Fox\\
+%			Springfield, USA\\
+%			Email: homer@thesimpsons.com}
+%		\and
+%		\IEEEauthorblockN{James Kirk\\ and Montgomery Scott}
+%		\IEEEauthorblockA{Starfleet Academy\\
+%			San Francisco, California 96678--2391}}
 
+\author{
+	\vspace{1.45cm}}
+
+
+	\maketitle
+	
 	\begin{abstract}\label{section:abstract}
-		\input{1-abstract}
+		\input{1-abstract.tex}
 	\end{abstract}
-
-	\begin{keyword}
-		Project popularity\sep Internet of things projects\sep Hackster.io
-	\end{keyword}
-
-\end{frontmatter}
-
-\linenumbers
-
-%%%%%%%%% begin content
-\input{2-introduction}
-\input{3-datacollection}
-\input{4-metrics}
-\input{5-approach}
-
-\input{rq1}
-\input{rq2}
-\input{rq3}
-\input{rq4}
-\input{rq5}
-\input{6-guidelines}
-\input{7-ToV}
-\input{8-relatedwork}
-\input{9-conclusion}
-%%%%%%%%% end content
-
-\section*{References}
-
-\bibliography{biblio}
-
-\appendix
-\input{appendix}
-
+	
+	\IEEEpeerreviewmaketitle
+	
+	\input{2-introduction}
+	\input{3-datacollection}
+	\input{4-metrics}
+	\input{5-approach}
+	
+	\input{rq1}
+	\input{rq2}
+	\input{rq3}
+	\input{rq4}
+	\input{rq5}
+	
+	
+	\input{6-ToV}
+	\input{7-relatedwork}
+	\input{8-conclusion}
+	
+	\bibliographystyle{IEEEtran}
+	\bibliography{biblio} 
+	
 \end{document}
+
+

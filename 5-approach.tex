@@ -1,44 +1,80 @@
 \section{Approach}\label{section:approach}
 
-In this section, we explain our approach for addressing our five research questions.
-As mentioned earlier in Section~\ref{introduction}, we study the popularity of IoT projects using five groups of metrics, \ie~(i) project page, (ii) user comments, (iii) source-code, (iv) developer profile, and (v) developer activities.
-To investigate the contribution of each metric group and highlight the metrics that share a significant relationship with the popularity of IoT projects, we build regression
-models~\cite{weisberg2005applied,lrm}.
+In this section, we explain our approach for addressing our five research
+questions.  As mentioned earlier in Section~\ref{introduction}, we study the
+popularity of IoT projects using five groups of metrics, \ie~(i) project page,
+(ii) user comments, (iii) source-code, (iv) developer profile, and (v)
+developer activities.  To investigate the contribution of each metric group and
+highlight the metrics that share a significant relationship with the popularity
+of IoT projects, we build regression models~\cite{weisberg2005applied,lrm}.
 
 \vspace{0.1cm}
 
-\noindent\textit{Correlation Analysis.}
-Correlated metrics distort the explanatory power of regression models since it is hard to study the exact contribution of each correlated metric~\cite{harrell2001rms}.
-Additionally, correlated metrics can shadow the true explanatory power of other metrics.
-We apply the following steps to remove the correlated metrics.
+\noindent\textit{Correlation Analysis.} Correlated metrics distort the
+explanatory power of regression models since it is hard to study the exact
+contribution of each correlated metric~\cite{harrell2001rms}.  Additionally,
+correlated metrics can shadow the true explanatory power of other metrics.  We
+apply the following steps to remove the correlated metrics.
 
 \begin{enumerate}
-	\item[(i)] For each group of metrics, we apply a metric clustering analysis~\cite{sarle1990varclus} to construct a hierarchical overview of the correlation among all the metrics in the same group of metrics.
-	For sub-hierarchies of metrics with $|\rho|>0.7$~\cite{nguyen2010studying}, we select only one metric for inclusion in our model. We select the metric that is easier to measure and to understand. The last columns in Tables~\ref{table:RQ1}, \ref{table:RQ2}, \ref{table:RQ3}, \ref{table:RQ4},and \ref{table:RQ5} show the correlated metrics.
+	\item[(i)] For each group of metrics, we apply a metric clustering
+		analysis~\cite{sarle1990varclus} to construct a hierarchical
+		overview of the correlation among all the metrics in the same
+		group of metrics.  For sub-hierarchies of metrics with
+		$|\rho|>0.7$~\cite{nguyen2010studying}, we select only one
+		metric for inclusion in our model. We select the metric that is
+		easier to measure and to understand. The last columns in
+		Tables~\ref{table:RQ1}, \ref{table:RQ2}, \ref{table:RQ3},
+		\ref{table:RQ4},and \ref{table:RQ5} show the correlated
+		metrics.
 	
-	\item[(ii)] We apply a hierarchical clustering analysis on all the metrics that pass the first step to check whether there exist metrics that share a high correlation with each other across the five group of metrics. However, we did not identify any correlated metric across the five groups of metrics. Therefore, we safely compare the contribution of each group of metrics to project popularity.
+	\item[(ii)] We apply a hierarchical clustering analysis on all the
+		metrics that pass the first step to check whether there exist
+		metrics that share a high correlation with each other across
+		the five group of metrics. However, we did not identify any
+		correlated metric across the five groups of metrics. Therefore,
+		we safely compare the contribution of each group of metrics to
+		project popularity.
 \end{enumerate}
 
 \vspace{0.1cm}
 
-\noindent\textit{Metrics Preparation.} We treat metrics as (i) nominal metrics that include two or more
-categories, such as the platform of a project, and (ii) numeric
-metrics, such as the number of stories. We also normalize the explanatory metrics so we can better compare the coefficients.
+\noindent\textit{Metrics Preparation.} We treat metrics as (i) nominal metrics
+that include two or more categories, such as the platform of a project, and
+(ii) numeric metrics, such as the number of stories. We also normalize the
+explanatory metrics so we can better compare the coefficients.
 
-Let $\{m\}$ be the metrics from all five group of metrics after applying the two steps (see above), $\{m_{-page}\}$ be all the metrics but the project page metrics, $\{m_{-comment}\}$ be all the metrics but the user comments metrics, $\{m_{-code}\}$ be all the metrics but the source-code metrics, $\{m_{-developer}\}$ be all the metrics but the developer profile metrics, and $\{m_{-activity}\}$ be all the metrics but the developer activities metrics.
+Let $\{m\}$ be the metrics from all five group of metrics after applying the
+two steps (see above), $\{m_{-page}\}$ be all the metrics but the project page
+metrics, $\{m_{-comment}\}$ be all the metrics but the user comments metrics,
+$\{m_{-code}\}$ be all the metrics but the source-code metrics,
+$\{m_{-developer}\}$ be all the metrics but the developer profile metrics, and
+$\{m_{-activity}\}$ be all the metrics but the developer activities metrics.
 
 \vspace{0.1cm}
 
-\noindent\textit{General Model Construction.}
-We build a linear regression model~\cite{weisberg2005applied,lrm}
-($model_{general}$) with all the metrics $\in\{m\}$. Building a general model has two benefits: (i) Building a general model allows us to identify the metrics that share a significant relationship with the popularity of IoT projects in the presence of all of the metrics. (ii) We use the $model_{general}$ as a reference model to investigate the contribution of each group of metrics to project popularity.
+\noindent\textit{General Model Construction.} We build a linear regression
+model~\cite{weisberg2005applied,lrm} ($model_{general}$) with all the metrics
+$\in\{m\}$. Building a general model has two benefits: (i) Building a general
+model allows us to identify the metrics that share a significant relationship
+with the popularity of IoT projects in the presence of all of the metrics. (ii)
+We use the $model_{general}$ as a reference model to investigate the
+contribution of each group of metrics to project popularity.
 
-We obtain the $R^2$ of $0.68$ and the adjusted $R^2$ of $0.67$
-that are enough to explain a considerable portion of the relationship between the metrics and the popularity of IoT projects~\cite{glantz1990primer,steel1960torrie,draper1998applied}.
-The $R^2$ of a regression model shows the difference between the explained variation and the total variation~\cite{glantz1990primer}.
-%The $R^2=0$ indicates that the model cannot model explain the variability of the response metric around its mean, while the $R^2=1$  indicates otherwise~\cite{steel1960torrie}.
-$R^2$ is a widely used metric to estimate the goodness-of-fit of a regression model~\cite{box1978statistics,kitchenham2002preliminary}. However, $R^2$ tends to increase when extra explanatory metrics are added to the model.
-Henri Theil~\cite{theil1971applied} proposed a modification of $R^2$ where the number of explanatory metrics can be adjusted relative to the number of observations~\cite{theil1971applied}. The small gap between the obtained $R^2$ and the adjusted $R^2$ (i.e., $0.01$) indicates that the goodness-of-fit is not due to adding unimportant metrics to the model. 
+We obtain the $R^2$ of $0.68$ and the adjusted $R^2$ of $0.67$ that are enough
+to explain a considerable portion of the relationship between the metrics and
+the popularity of IoT
+projects~\cite{glantz1990primer,steel1960torrie,draper1998applied}.  The $R^2$
+of a regression model shows the difference between the explained variation and
+the total variation~\cite{glantz1990primer}.  $R^2$ is a widely used metric to
+estimate the goodness-of-fit of a regression
+model~\cite{box1978statistics,kitchenham2002preliminary}. However, $R^2$ tends
+to increase when extra explanatory metrics are added to the model.  Henri
+Theil~\cite{theil1971applied} proposed a modification of $R^2$ where the number
+of explanatory metrics can be adjusted relative to the number of
+observations~\cite{theil1971applied}. The small gap between the obtained $R^2$
+and the adjusted $R^2$ (i.e., $0.01$) indicates that the goodness-of-fit is not
+due to adding unimportant metrics to the model. 
 
 \vspace{0.1cm}
 

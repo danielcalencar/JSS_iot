@@ -1,12 +1,14 @@
-\begin{table*}[t]
+\begin{sidewaystable}
+	\scriptsize
+	\tabcolsep=0.1cm
 \centering
 \caption{List of the source-code metrics. The significant metrics are marked with (an) asterisk(s). The upward arrows indicate a positive relationship with project popularity, while the downward arrows indicate otherwise.}
 \label{table:RQ3}
-\begin{tabular}{|>{\bfseries}l|r|rl|c|l|}
-	\hline
+	\begin{tabularx}{\columnwidth}{>{\bfseries}lrrlcl}
+	\toprule
 	\multirow{2}{*}{Metric} & \textbf{Mean}  & \multirow{2}{*}{\textbf{p-value}}  &     & \multirow{2}{*}{\textbf{Effect}}     &\textbf{Correlated}\\
 	&\textbf{Square}&& &&\textbf{Metrics} \\
-	\hline	\hline
+	\midrule	\midrule
 CountDeclInstanceVariableInternal          & 1.21E-01 & 1.90E-16 & *** & $\nearrow$ &             $-$                                                                                                                                                                                                                                                                                                                                                     \\
 AltAvgLineCode                             & 1.22E-01 & 1.38E-16 & *** & $\searrow$ & AltAvgLineBlank, AltAvgLineComment                                                                                                                                                                                                                                                                                                                              \\
 CountDeclMethodDefault                     & 3.71E-02 & 4.27E-06 & *** & $\nearrow$ &               $-$                                                                                                                                                                                                                                                                                                                                                   \\
@@ -32,8 +34,8 @@ CountDeclFile                              & 4.50E-04 & 6.11E-01 &     & $\searr
 CountDeclMethodConst                       & 2.60E-04 & 6.99E-01 &     & $\searrow$ &    $-$                                                                                                                                                                                                                                                                                                                                                              \\
 CountStmtEmpty                             & 1.60E-04 & 7.64E-01 &     & $\nearrow$ &   $-$                                                                                                                                                                                                                                                                                                                                                               \\
 AvgLineBlank                               & 1.20E-04 & 7.89E-01 &     & $\nearrow$ &  $-$                                                                                                                                                                                                                                                                                                                                                                \\
-CountLine                                  & 6.00E-05 & 8.53E-01 &     & $\searrow$ & \begin{tabular}[c]{@{}l@{}}AvgCyclomatic, AvgCyclomaticModified, AvgCyclomaticStrict,\\ AvgLine, AvgLineCode, CountDeclFunction, CountLine,\\ CountLineBlank, CountLineCode, CountLineCodeDecl,\\ CountLineCodeExe, CountStmt, CountStmtDecl, CountStmtExe,\\ Cyclomatic, CyclomaticModified, CyclomaticStrict, Essential\end{tabular} \\ \hline
+CountLine                                  & 6.00E-05 & 8.53E-01 &     & $\searrow$ & \begin{tabular}[c]{@{}l@{}}AvgCyclomatic, AvgCyclomaticModified, AvgCyclomaticStrict,\\ AvgLine, AvgLineCode, CountDeclFunction, CountLine,\\ CountLineBlank, CountLineCode, CountLineCodeDecl,\\ CountLineCodeExe, CountStmt, CountStmtDecl, CountStmtExe,\\ Cyclomatic, CyclomaticModified, CyclomaticStrict, Essential\end{tabular} \\ \bottomrule
 \multicolumn{6}{l}{$p-value$ codes:  `***'$<0$, `**'$<0.001$, `*'$<0.01$, `.'$<0.05$}\\ 
-\end{tabular}
+\end{tabularx}
 \vspace{-0.1cm}
-\end{table*}
+\end{sidewaystable}

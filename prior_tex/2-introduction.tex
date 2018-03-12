@@ -28,7 +28,7 @@ create business opportunities, especially for those developers whose projects
 are more popular among users. For example, the page of a popular project might
 serve as an advertiser for a company that supports that project.
 Also, the owners of popular projects receive {\em reputation
-points}~\cite{reputation}, which can be exchanged with products in online stores~\cite{store}.
+points}~\cite{reputation} which can be exchanged with products in online stores~\cite{store}.
 
 Several studies in the recent years have investigated the metrics that share a
 significant relationship with the popularity of software projects in online
@@ -38,58 +38,45 @@ Tian~\etal~\cite{tian2015characteristics} studied the metrics that are
 significantly associated with highly rated free Android applications.
 Tian~\etal~found that the number of promotional images displayed by an app on
 the Google Play Store and the size of the app are strongly correlated with
-highly rated Android apps. Despite the advances in studying the popularity of
-software projects, the metrics that affect the popularity of IoT projects
-remain unexplored. Such an investigation is important, since IoT projects have
-different characteristics from software projects---IoT projects need a much
-diverse hardware depending on the goal of the project. For instance, an IoT
-project for a smart door requires 14 different hardware
-components~\cite{smartdoor}. In addition, because IoT projects work with
-embedded systems, IoT projects are coded on a much lower level when compared to
-software projects. 
+highly rated Android apps. Despite the advances that have been made by studying the popularity of software
+projects in online communities, little is known about the characteristics of
+the popular IoT projects.
 
-Finally, differently from open source software projects, which developers
-are able to clone (e.g., as in GitHub) and start performing modifications,
-IoT projects require replication steps. For example, to benefit from IoT
-projects that are published online, developers have to acquire the same (or
-equivalent) hardware that are used in those projects. Hence, the factors that
-affect the popularity of an IoT project, such as the time to replicate the project or
-the number of required hardware, may be entirely different from factors that
-impact the popularity of, for example, GitHub open source projects.
+the growing importance of IoT applications
 
-To investigate the popularity of IoT project, we conduct an exploratory study
-using online communities. We investigate $1,232$ IoT projects that are hosted
-on \textit{Hackster}~\cite{hackster}. Hackster stands out from other online communities because it has a large
-developer base (\ie{} 409,968 developers as of today). Hackster is sponsored by Microsoft, Intel, Google, and Amazon.
-In addition, several IoT projects on Hackster are developed and deployed
-using IoT cloud services, such as Amazon Web Service IoT Platform (AWS
-IoT)~\cite{awsamazon} and Microsoft Azure~\cite{azure}. Such projects
+In this paper, we conduct an exploratory study to investigate the popularity of
+IoT projects in online communities.  We perform a case study of $1,232$ IoT
+projects that are hosted on \textit{Hackster}~\cite{hackster}, a large online
+IoT community that is sponsored by Microsoft, Intel, Google, and Amazon.  In
+addition, several IoT projects on the Hackster are developed and deployed using
+IoT cloud services, such as Amazon Web Service IoT Platform (AWS
+IoT)~\cite{awsamazon} and Microsoft Azure~\cite{azure}.  Such projects
 comprehend a wide diversity of IoT projects, such as home automation (e.g.,
 remotely controlling the surveillance cameras and air conditioners in the
 house).  All of the collected IoT projects in our study are based on the two
 most popular IoT platforms (i.e., \textit{Arduino} and \textit{Raspberry
 Pi})~\cite{hackster-survey-2016}. 
 
-We study five groups of metrics where each group covers different
-characteristics of an IoT project, including (i) \textit{project page} that
-concerns textual and graphical explanations, (ii) \textit{source-code} that
-examines the source-code metrics, (iii) \textit{user comments} group that
-covers the comments that are posted for each project, (iv) \textit{developer
-profile} that covers the profile contents of each developer, and (v)
-\textit{developer activities} that reflects each developers' activities on the
-Hackster. In total, we measure $112$ metrics to explain project popularity.
-First, we investigate the popularity of IoT projects by building a linear
-regression model, namely a general model, which obtains a goodness-of-fit of
-$0.67$ that can greatly explain the relationship between the metrics and
-project popularity~\cite{pearson1893contributions}.  To determine the
-contribution of each group of metrics to project popularity, we repeat the
-following steps for each group of metrics: (i) we remove all the metrics of a
-given group and build another model, and (ii) we investigate the contribution
-of each group of metrics by comparing the new model with the general model
-using the $\chi^2$ test~\cite{rice1989analyzing}.  Moreover, we identify the
-metrics that share a significant relationship with project popularity.
-Developers can improve the popularity of their projects with respect to our
-findings. We are in favor of addressing the following five research questions:
+We study five groups of metrics where each group covers a unique aspect of an
+IoT project, including (i) \textit{project page} that concerns textual and
+graphical explanations, (ii) \textit{source-code} that examines the source-code
+metrics, (iii) \textit{user comments} group that covers the comments that are
+posted for each project, (iv) \textit{developer profile} that covers the
+profile contents of each developer, and (v) \textit{developer activities}
+that reflects each developers' activities on the Hackster. In total, we measure
+$112$ metrics to explain project popularity.  First, we investigate the
+popularity of IoT projects by building a linear regression model, namely a
+general model, which obtains a goodness-of-fit of $0.67$ that can greatly
+explain the relationship between the metrics and project
+popularity~\cite{pearson1893contributions}.  To determine the contribution of
+each group of metrics to project popularity, we repeat the following steps for
+each group of metrics: (i) we remove all the metrics of a given group and build
+another model, and (ii) we investigate the contribution of each group of
+metrics by comparing the new model with the general model using the $\chi^2$
+test~\cite{rice1989analyzing}.  Moreover, we identify the metrics that share a
+significant relationship with project popularity.  Developers can improve the
+popularity of their projects with respect to our findings.  We are in favor of
+addressing the following five research questions:
 
 \vspace{0.1cm}
 

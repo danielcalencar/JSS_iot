@@ -1,24 +1,27 @@
 \section{Results}\label{section:results}
+\begin{comment}
+\end{comment}
 
-In this section, we present our motivations and the results of each research question. Each research
-question $Q$ analyzes a specific group $\partial_Q$ of metrics. First, we examine how significant is the relationship that $\partial_Q$ shares with the popularity of IoT projects.
-Then, we highlight the most significant metrics of $\partial_Q$ as indicated by the $model_{general}$.
+In this section, we present our motivations and the results of each research
+question. Each research question $Q$ analyzes a specific group $\partial_Q$ of
+metrics. First, we examine how significant is the relationship that
+$\partial_Q$ shares with the popularity of IoT projects.  Then, we highlight
+the most significant metrics of $\partial_Q$ as indicated by the
+$model_{general}$.
 
-
-
-\noindent\textbf{\RQone}
-
-
+\subsection*{\bfseries\RQone}
 
 \vspace{0.1cm}
 
 \noindent\textbf{\textit{Motivation.}}
-As mentioned in Section~\ref{datacol}, project pages provide descriptions and details of a given project. However, the importance of the project pages is not clear for developers. For example, a developer may underestimate the relevance of project estimated time (i.e., the time needed to complete a project) to project popularity. In this research question, we show that the project page group of metrics shares a significant relationship with project popularity.
-
-
+As mentioned in Section~\ref{datacol}, project pages provide descriptions and
+details of a given project. However, the importance of the project pages is not
+clear for developers. For example, a developer may underestimate the relevance
+of project estimated time (i.e., the time needed to complete a project) to
+project popularity. In this research question, we show that the project page
+group of metrics shares a significant relationship with project popularity.
 
 \vspace{0.1cm}
-
 
 \input{Tables/RQ1.tex}
 
@@ -26,8 +29,13 @@ As mentioned in Section~\ref{datacol}, project pages provide descriptions and de
 
 %\input{Tables/RQ1-Difficulty.tex} 
 
-\noindent\textbf{\textit{Contribution of the Project Page Group of Metrics.}} \textbf{The project page metrics make a significant contribution to the popularity of IoT projects}. The $\chi^2$ test indicates a $Pr(>\chi)=9.56E-15$.
-Therefore, the project page group of metrics is significantly related to project popularity. To achieve a higher popularity, developers should pay special attention to the project pages rather than just focusing on one aspect of a project, such as source-code.
+\noindent\textbf{\textit{Contribution of the Project Page Group of Metrics.}}
+\textbf{The project page metrics make a significant contribution to the
+popularity of IoT projects}. The $\chi^2$ test indicates a
+$Pr(>\chi)=9.56E-15$.  Therefore, the project page group of metrics is
+significantly related to project popularity. To achieve a higher popularity,
+developers should pay special attention to the project pages rather than just
+focusing on one aspect of a project, such as source-code.
 
 \vspace{0.1cm}
 
@@ -40,7 +48,6 @@ The correlated metrics are listed in the last column.
 
 \input{Tables/tags.tex}
 
-\input{Tables/RQ2.tex}
 
 \textbf{The number of tags has the most significant relationship with project popularity in comparison with other project page metrics.} As the number of tags increases, the popularity of a project is subject to increase.
 This observation might be related to the vital importance of the tags as an effective mechanism to attract users~\cite{zarrella2009social}.
@@ -54,30 +61,62 @@ Consequently, developers should keep all the restrictions of the available licen
 
 
 \textbf{Setting difficulties does not impact project popularity negatively.}
-Although {\em difficulty} shares a significant relationship with project popularity (see Table~\ref{table:RQ1}), the value of difficulty does not negatively impact project popularity. However, setting the difficulty to \textit{super hard} is the only case that does not contribute to a higher project popularity significantly.
-Therefore, it is better for developers to avoid setting their projects as {\em super~hard} projects.
+Although {\em difficulty} shares a significant relationship with project
+popularity (see Table~\ref{table:RQ1}), the value of difficulty does not
+negatively impact project popularity. However, setting the difficulty to
+\textit{super hard} is the only case that does not contribute to a higher
+project popularity significantly.  Therefore, it is better if developers are
+able to optimize the process of replicating their project to avoid setting the
+difficulty as {\em super~hard} (whenever possible, of course).
 
-\textbf{A shorter estimated time is associated with a higher project popularity.} The estimated time of a project shares a significant inverse relationship with project popularity. Developers should keep the estimated time as short as possible since projects with a shorter estimated time tend to be more popular.
+\textbf{A shorter estimated time is associated with a higher project
+popularity.} The estimated time of a project shares a significant inverse
+relationship with project popularity. Whenever possible, developers should
+optimize the process of replicating their projects in order to keep the
+estimated time as short as possible. Projects with a shorter estimated time
+tend to be more popular.
 
-
-\textbf{The number of software tools shares a significant relationship with project popularity, while the number of hardware tools does not.} As shown in Table~\ref{table:RQ1}, the number of software tools that are used to build a project has a significant positive relationship with project popularity. On the other hand, the number of used hardware tools does not have a significant contribution to project popularity. The significant impact of the {\em number of software tools} metric may be explained by users being more attracted to projects that use software tools which with such users are more familiar.
+\textbf{The number of software tools shares a significant relationship with
+project popularity, while the number of hardware tools does not.} As shown in
+Table~\ref{table:RQ1}, the number of software tools that are used to build a
+project has a significant positive relationship with project popularity. On the
+other hand, the number of used hardware tools does not have a significant
+contribution to project popularity. The significant impact of the {\em number
+of software tools} metric may indicate that projects that use more tools
+provide more advanced solutions. Another explanation is that users might be
+attracted to projects that uses more tools in order to learn such tools and
+acquire new skills.
 
 \textbf{Project explanations contribute significantly to project popularity.}
-As shown in Table~\ref{table:RQ1}, the number of stories, description length, and availability of schematics all play an important role in the popularity of IoT projects.
-Although developers should keep the number of stories as low as possible, developers should provide more content for descriptions.
-Providing schematics has an inverse relationship with the popularity. By investigating our projects more deeply, we observe that harder projects tend to provide more schematics.
-For example, $85\%$ of the advanced projects provide schematics.
-Moreover, projects that are marked as \textit{in progress} share a significant inverse relationship with project popularity.
-Developers should publish rich and simple instructions for their final work in order to achieve higher popularity.
+As shown in Table~\ref{table:RQ1}, the number of stories, description length,
+and availability of schematics all play an important role in the popularity of
+IoT projects.  Although developers should keep the number of stories as low as
+possible, developers should provide more content for descriptions.  Providing
+schematics has an inverse relationship with the popularity. By investigating
+our projects more deeply, we observe that harder projects tend to provide more
+schematics.  For example, $85\%$ of the advanced projects provide schematics.
+Moreover, projects that are marked as \textit{in progress} share a significant
+inverse relationship with project popularity.  Developers should publish rich
+and simple instructions for their final work in order to achieve higher
+popularity.
 
 
 \input{Tables/RQ3.tex}
 
 \noindent\textbf{\textit{Discussion.}}
-Due to the importance of the number of tags and the number of software tools (see Table~\ref{table:RQ1}), we perform deeper analyses of these metrics by adding all the distinct tags (i.e., $1,646$ tags) and all the distinct software tools (i.e., $518$ software tools) of the subject projects to our model as factor metrics.
+Due to the importance of the number of tags and the number of software tools
+(see Table~\ref{table:RQ1}), we perform deeper analyses of these metrics by
+adding all the distinct tags (i.e., $1,646$ tags) and all the distinct software
+tools (i.e., $518$ software tools) of the subject projects to our model as
+factor metrics.
 By knowing the exact tags and software tools that can improve project popularity, developers should utilize such tags and software tools to improve the popularity of their projects.
-%We extract all the distinct tags and all the distinct software tools from our subject projects.
-We identify $65$ tags that have a significant relationship with the popularity of the projects. A complete list of all important tags are listed in Table~\ref{table:tags}. We also found three software tools that significantly contribute to the popularity of the projects, including \emph{Microsoft Windows IoT Core}, \emph{Here Maps API}, and \emph{Google Earth}.
+We identify $65$ tags that have a significant relationship with the popularity
+of the projects. A complete list of all important tags are listed in
+Table~\ref{table:tags}. We also found three software tools that significantly
+contribute to the popularity of the projects, including \emph{Microsoft Windows
+IoT Core}, \emph{Here Maps API}, and \emph{Google Earth}.
 
-\hypobox{The project page metrics make a significant contribution to project popularity. Our results suggest that developers should carefully tag their projects and should provide enough didactic material for their projects.}
+\hypobox{The project page metrics make a significant contribution to project
+popularity. Our results suggest that developers should carefully tag their
+projects and should provide enough didactic material for their projects.}
 

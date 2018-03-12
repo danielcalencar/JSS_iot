@@ -1,19 +1,20 @@
 \begin{table}[t]
+	\scriptsize
 \centering
 \setlength{\tabcolsep}{3pt}
 \caption{List of the developer profile metrics. The significant metrics are marked with (an) asterisk(s). The upward arrows indicate a positive relationship with project popularity, while the downward arrows indicate otherwise.}
 \label{table:RQ4}
-\begin{tabular}{|>{\bfseries}l|r|rl|c|l|}
-	\hline
+	\begin{tabularx}{0.78\columnwidth}{>{\bfseries}lrrlcl}
+	\toprule
 	\multirow{2}{*}{Metric} & \textbf{Mean}  & \multirow{2}{*}{\textbf{p-value}}  &     & \multirow{2}{*}{\textbf{Effect}}     &\textbf{Correlated}\\
 	&\textbf{Square}&& &&\textbf{Metrics} \\
-	\hline	\hline
+	\midrule	\midrule
 \#Projects  & 4.80E-02 & 1.72E-07 & *** & $\searrow$ &                  $-$     \\
 \#Skills    & 3.34E-02 & 1.28E-05 & *** & $\nearrow$ &                 $-$      \\
 \#Tools    & 1.25E-02 & 7.54E-03 & **  & $\nearrow$ &                 $-$      \\
 Length of Biography  & 7.26E-03 & 4.13E-02 & *   & $\nearrow$ &                  $-$     \\
-Looking For a Job & 3.62E-03 & 1.49E-01 &     & $\nearrow$ &                 $-$       \\ \hline
+Looking For a Job & 3.62E-03 & 1.49E-01 &     & $\nearrow$ &                 $-$       \\ \bottomrule
 \multicolumn{6}{l}{$p-value$ codes:  `***'$<0$, `**'$<0.001$, `*'$<0.01$, `.'$<0.05$}\\ 
-\end{tabular}
+\end{tabularx}
 \vspace{-0.1cm}
 \end{table}

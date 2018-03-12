@@ -1,0 +1,157 @@
+\begin{table}
+	\centering
+	\scriptsize
+	\caption{Code metrics that we use from the Understand tool~\cite{understand} (Part I).\label{table:code_metrics1}}
+	\begin{tabular}{p{0.3\textwidth}p{0.3\textwidth}p{0.35\textwidth}}
+		\hline
+		{\bfseries Metric Name} & {\bfseries API} & {\bfseries Description}\\
+		\hline
+		Average Number of Blank Lines (Include Inactive) & AltAvgLineBlank & Average number of blank lines for all nested functions or methods, including inactive regions.\\
+		Average Number of Lines of Code (Include Inactive) & AltAvgLineCode & Average number of lines containing source code for all nested functions or methods, including inactive regions.\\
+		Average Number of Lines with Comments (Include Inactive) & AltAvgLineComment & Average number of lines containing comment for all nested functions or methods, including inactive regions.\\
+		Blank Lines of Code (Include Inactive) & AltCountLineBlank & Number of blank lines, including inactive regions.\\
+		Lines of Code (Include Inactive) & AltCountLineCode & Number of lines containing source code, including inactive regions.\\
+		Lines with Comments (Include Inactive) & AltCountLineComment & Number of lines containing comment, including inactive regions.\\
+		Average Cyclomatic Complexity & AvgCyclomatic & Average cyclomatic complexity for all nested functions or methods.\\
+		Average Modified Cyclomatic Complexity & AvgCyclomaticModified & Average modified cyclomatic complexity for all nested functions or methods.\\
+		Average Strict Cyclomatic Complexity & AvgCyclomaticStrict & Average strict cyclomatic complexity for all nested functions or methods.\\
+		Average Essential Cyclomatic Complexity & AvgEssential & Average Essential complexity for all nested functions or methods.\\
+		Average Essential Strict Modified Complexity & AvgEssentialStrictModified & Average strict modified essential complexity for all nested functions or methods.\\
+		Average Number of Lines & AvgLine & Average number of lines for all nested functions or methods.\\
+		Average Number of Blank Lines & AvgLineBlank & Average number of blank for all nested functions or methods.\\
+		Average Number of Lines of Code & AvgLineCode & Average number of lines containing source code for all nested functions or methods.\\
+		Average Number of Lines with Comments & AvgLineComment & Average number of lines containing comment for all nested functions or methods.\\
+		Base Classes & CountClassBase & Number of immediate base classes. [aka IFANIN]\\
+	\end{tabular}
+\end{table}
+
+\begin{table}
+	\centering
+	\scriptsize
+	\caption{Code metrics that we use from the Understand tool~\cite{understand} (Part II)\label{table:code_metrics2}}
+	\begin{tabular}{p{0.3\textwidth}p{0.3\textwidth}p{0.35\textwidth}}
+		\hline
+		{\bfseries Metric Name} & {\bfseries API} & {\bfseries Description}\\
+		\hline
+		Coupling Between Objects & CountClassCoupled & Number of other classes coupled to. [aka CBO (coupling between object classes)]\\
+		Number of Children & CountClassDerived & Number of immediate subclasses. [aka NOC (number of children)]\\
+		Classes & CountDeclClass & Number of classes.\\
+		Class Methods & CountDeclClassMethod & Number of class methods.\\
+		Class Variables & CountDeclClassVariable & Number of class variables.\\
+		Number of Files & CountDeclFile & Number of files.\\
+		Function & CountDeclFunction & Number of functions.\\
+		Instance Methods & CountDeclInstanceMethod & Number of instance methods. [aka NIM]\\
+		Instance Variables & CountDeclInstanceVariable & Number of instance variables. [aka NIV]\\
+		Internal Instance Variables & CountDeclInstanceVariable\-Internal & Number of internal instance variables.\\
+		Private Instance Variables & CountDeclInstanceVariable\-Private & Number of private instance variables.\\
+		Protected Instance Variables & CountDeclInstanceVariable\-Protected & Number of protected instance variables.\\
+		Protected Internal Instance Variables & CountDeclInstanceVariable\-ProtectedInternal & Number of protected internal instance variables.\\
+		Public Instance Variables & CountDeclInstanceVariable\-Public & Number of public instance variables.\\
+		Local Methods & CountDeclMethod & Number of local methods.\\
+		Methods & CountDeclMethodAll & Number of methods, including inherited ones. [aka RFC (response for class)]\\
+		Local Const Methods & CountDeclMethodConst & Number of local const methods.\\
+		Local Default Visibility Methods & CountDeclMethodDefault & Number of local default methods.\\
+		Friend Methods & CountDeclMethodFriend & Number of local friend methods. [aka NFM]\\
+		Local Internal Methods & CountDeclMethodInternal & Number of local internal methods.\\
+		Private Methods & CountDeclMethodPrivate & Number of local private methods. [aka NPM]\\
+		Protected Methods & CountDeclMethodProtected & Number of local protected methods.\\
+		Local Protected Internal Methods & CountDeclMethodProtected\-Internal & Number of local protected internal methods.\\
+
+	\end{tabular}
+\end{table}
+
+\begin{table}
+	\centering
+	\scriptsize
+	\caption{Code metrics that we use from the Understand tool~\cite{understand} (Part III)\label{table:code_metrics3}}
+	\begin{tabular}{p{0.3\textwidth}p{0.3\textwidth}p{0.35\textwidth}}
+		\hline
+		{\bfseries Metric Name} & {\bfseries API} & {\bfseries Description}\\
+		\hline
+		Public Methods & CountDeclMethodPublic & Number of local public methods. [aka NPRM]\\
+		Local strict private methods & CountDeclMethodStrictPrivate & Number of local strict private methods.\\
+		Local strict published methods & CountDeclMethodStrictPublished & Number of local strict published methods.\\
+		Modules & CountDeclModule & Number of modules.\\
+		Program Units & CountDeclProgUnit & Number of non-nested modules, block data units, and subprograms.\\
+		Properties & CountDeclProperty & Number of properties.\\
+		Auto Implemented Properties & CountDeclPropertyAuto & Number of auto-implemented properties.\\
+		Subprograms & CountDeclSubprogram & Number of subprograms.\\
+		Inputs & CountInput & Number of calling subprograms plus global variables read. [aka FANIN]\\
+		Physical Lines & CountLine & Number of all lines. [aka NL]\\
+		Blank Lines of Code & CountLineBlank & Number of blank lines. [aka BLOC]\\
+		Blank html lines & CountLineBlank\_Html & Number of blank html lines.\\
+		Blank javascript lines & CountLineBlank\_Javascript & Number of blank javascript lines.\\
+		Blank php lines & CountLineBlank\_Php & Number of blank php lines.\\
+		Source Lines of Code & CountLineCode & Number of lines containing source code. [aka LOC]\\
+		Declarative Lines of Code & CountLineCodeDecl & Number of lines containing declarative source code.\\
+		Executable Lines of Code & CountLineCodeExe & Number of lines containing executable source code.\\
+		Javascript source code lines & CountLineCode\_Javascript & Number of javascript lines containing source code.\\
+		PHP Source Code Lines & CountLineCode\_Php & Number of php lines containing source code.\\
+		Lines with Comments & CountLineComment & Number of lines containing comment. [aka CLOC]\\
+		HTML Comment Lines & CountLineComment\_Html & Number of html lines containing comment.\\
+	\end{tabular}
+\end{table}
+
+\begin{table}
+	\centering
+	\scriptsize
+	\caption{Code metrics that we use from the Understand tool~\cite{understand} (Part IV)\label{table:code_metrics4}}
+	\begin{tabular}{p{0.3\textwidth}p{0.3\textwidth}p{0.35\textwidth}}
+		\hline
+		{\bfseries Metric Name} & {\bfseries API} & {\bfseries Description}\\
+		\hline
+		Javascript Comment Lines & CountLineComment\_Javascript & Number of javascript lines containing comment.\\
+		PHP Comment Lines & CountLineComment\_Php & Number of php lines containing comment.\\
+		Inactive Lines & CountLineInactive & Number of inactive lines.\\
+		Preprocessor Lines & CountLinePreprocessor & Number of preprocessor lines.\\
+		HTMLLines & CountLine\_Html & Number of all html lines.\\
+		Javascript Lines & CountLine\_Javascript & Number of all javascript lines.\\
+		PHP Lines & CountLine\_Php & Number of all php lines.\\
+		Outputs & CountOutput & Number of called subprograms plus global variables set. [aka FANOUT]\\
+		Coupled Packages & CountPackageCoupled & Number of other packages coupled to.\\
+		Paths & CountPath & Number of possible paths, not counting abnormal exits or gotos. [aka NPATH]\\
+		Paths (Log10x) & CountPathLog & Log10, truncated to an integer value, of the metric CountPath\\
+		Semicolons & CountSemicolon & Number of semicolons.\\
+		Statements & CountStmt & Number of statements.\\
+		Declarative Statements & CountStmtDecl & Number of declarative statements.\\
+		Javascript Declarative Statements & CountStmtDecl\_Javascript & Number of javascript declarative statements.\\
+		PHP Declarative Statements & CountStmtDecl\_Php & Number of php declarative statements.\\
+		Empty Statements & CountStmtEmpty & Number of empty statements.\\
+		Executable Statements & CountStmtExe & Number of executable statements.\\
+		Javascript Executable Statements & CountStmtExe\_Javascript & Number of javascript executable statements.\\
+		PHP Executable Statements & CountStmtExe\_Php & Number of php executable statements.\\
+		Cyclomatic Complexity & Cyclomatic & Cyclomatic complexity.\\
+		Modified Cyclomatic Complexity & CyclomaticModified & Modified cyclomatic complexity.\\
+		Strict Cyclomatic Complexity & CyclomaticStrict & Strict cyclomatic complexity.\\
+		Sum Essential Strict Modified Complexity & SumEssentialStrictModified & Sum of strict modified essential complexity of all nested functions or methods.\\
+	\end{tabular}
+\end{table}
+
+\begin{table}
+	\centering
+	\scriptsize
+	\caption{Code metrics that we use from the Understand tool~\cite{understand} (Part V)\label{table:code_metrics5}}
+	\begin{tabular}{p{0.3\textwidth}p{0.3\textwidth}p{0.35\textwidth}}
+		\hline
+		{\bfseries Metric Name} & {\bfseries API} & {\bfseries Description}\\
+		\hline
+		Essential Complexity & Essential & Essential complexity. [aka Ev(G)]\\
+		Essential Strict Modified Complexity & EssentialStrictModified & Strict Modified Essential complexity.\\
+		Knots & Knots & Measure of overlapping jumps.\\
+		Max Cyclomatic Complexity & MaxCyclomatic & Maximum cyclomatic complexity of all nested functions or methods.\\
+		Max Modified Cyclomatic Complexity & MaxCyclomaticModified & Maximum modified cyclomatic complexity of nested functions or methods.\\
+		Max Strict Cyclomatic Complexity & MaxCyclomaticStrict & Maximum strict cyclomatic complexity of nested functions or methods.\\
+		Max Essential Complexity & MaxEssential & Maximum essential complexity of all nested functions or methods.\\
+		Max Knots & MaxEssentialKnots & Maximum Knots after structured programming constructs have been removed.\\
+		Max Essential Strict Modified Complexity & MaxEssentialStrictModified & Maximum strict modified essential complexity of all nested functions or methods.\\
+		Depth of Inheritance Tree & MaxInheritanceTree & Maximum depth of class in inheritance tree. [aka DIT]\\
+		Nesting & MaxNesting & Maximum nesting level of control constructs.\\
+		Minimum Knots & MinEssentialKnots & Minimum Knots after structured programming constructs have been removed.\\
+		Lack of Cohesion in Methods & PercentLackOfCohesion & 100\% minus the average cohesion for package entities. [aka LCOM, LOCM]\\
+		Comment to Code Ratio & RatioCommentToCode & Ratio of comment lines to code lines.\\
+		Sum Cyclomatic Complexity & SumCyclomatic & Sum of cyclomatic complexity of all nested functions or methods. [aka WMC]\\
+		Sum Modified Cyclomatic Complexity & SumCyclomaticModified & Sum of modified cyclomatic complexity of all nested functions or methods.\\
+		Sum Strict Cyclomatic Complexity & SumCyclomaticStrict & Sum of strict cyclomatic complexity of all nested functions or methods.\\
+		Sum Essential Complexity & SumEssential & Sum of essential complexity of all nested functions or methods.\\
+	\end{tabular}
+\end{table}
