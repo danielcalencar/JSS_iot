@@ -8,3 +8,5 @@
 *.gz
 *.zip
 0-main.pdf
+*.swp
+*~
